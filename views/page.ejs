@@ -1,0 +1,14 @@
+<%- include('heading') %>
+
+<div class="img-container flex-container">
+  <div class="img-wrapper flex-container">
+    <img alt="astronomical-picture-of-the-day" src="<%= imgUrl %>" />
+  </div>
+  <div class="img-desc flex-container">
+    <h3><%= imgTitle %></h3>
+    <h4><%= imgDate %></h4>
+    <p><%= imgDesc %></p>
+  </div>
+</div>
+
+<%- include('footer', {scriptURL: "/public/home.js"}) %>

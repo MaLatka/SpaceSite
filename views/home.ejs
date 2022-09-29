@@ -1,0 +1,18 @@
+<%- include('heading') %>
+<div class="content-container flex-container">
+  <h1 class="big-heading">Hello Space!</h1>
+  <div class="screen">
+    <h2 class="sub-heading" id="demo">
+      <!-- Check out NASA's Astronomy Photo of the Day -->
+    </h2>
+  </div>
+  <form class="flex-container" action="/apod" method="post">
+    <div class="btn-wrapper">
+      <button class="go-button" type="submit">
+        <i class="fa-solid fa-rocket"></i>
+      </button>
+    </div>
+  </form>
+</div>
+
+<%- include('footer', {scriptURL: "/public/home.js"}) %>
