@@ -41,8 +41,10 @@ app.get("/apod", (_req, res) => {
         const apodImage = apodData.url;
         const apodDesc = apodData.explanation;
         const apodDate = apodData.date;
+        const apodMediaType = apodData.media_type;
 
         res.render("page", {
+          mediaType: apodMediaType,
           imgUrl: apodImage,
           imgTitle: apodTitle,
           imgDate: apodDate,
@@ -56,8 +58,8 @@ app.get("/apod", (_req, res) => {
     });
 });
 
-app.post("/apod", (_req, res) => {
-  res.redirect("/apod");
+app.get("/search", (req, res) => {
+  res.render("search");
 });
 
 app.listen(process.env.PORT || PORT, (_req, _res) => {

@@ -2,7 +2,21 @@
 
 <div class="img-container flex-container">
   <div class="img-wrapper flex-container">
-    <img alt="astronomical-picture-of-the-day" src="<%= imgUrl %>" />
+    <% if(mediaType==="video") { %>
+    <iframe
+      width="700"
+      height="600"
+      src="<%= imgUrl %>"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+    <% } else { %>
+    <a href="<%= imgUrl %>" target="_blank">
+      <img alt="astronomical-picture-of-the-day" src="<%= imgUrl %>"
+    /></a>
+    <% } %>
   </div>
   <div class="img-desc flex-container">
     <h3><%= imgTitle %></h3>

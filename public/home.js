@@ -1,20 +1,20 @@
-
-$(window).on('load', () => {
-    setTimeout(() => {
-        changeOpacity(".content-container")
-    }, 500);
-    setTimeout(() => {
-        $.when(typeWriter()).then(
-            setTimeout(() => {
-                changeOpacity(".fa-rocket")
-            }, 2000))
-    }, 3000);
+$(window).on("load", () => {
+  setTimeout(() => {
+    changeOpacity(".content-container");
+  }, 500);
+  setTimeout(() => {
+    $.when(typeWriter()).then(
+      setTimeout(() => {
+        changeOpacity(".link-wrapper");
+      }, 2000)
+    );
+  }, 3000);
 });
 
 setTimeout(changeOpacity(".img-wrapper"), 500);
 
 function changeOpacity(el) {
-    $(el).addClass("animate-opacity");
+  $(el).addClass("animate-opacity");
 }
 
 let i = 0;

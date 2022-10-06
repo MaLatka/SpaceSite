@@ -6,13 +6,21 @@
       <!-- Check out NASA's Astronomy Photo of the Day -->
     </h2>
   </div>
-  <form class="flex-container" action="/apod" method="post">
-    <div class="btn-wrapper">
-      <button class="go-button" type="submit">
+  <div class="home-buttons">
+    <div class="link-wrapper">
+      <a href="/apod">
         <i class="fa-solid fa-rocket"></i>
-      </button>
+      </a>
+      <p>Show APOD</p>
     </div>
-  </form>
+
+    <div class="link-wrapper">
+      <a href="/search">
+        <i class="fa-solid fa-satellite"></i>
+      </a>
+      <p>Search Photos</p>
+    </div>
+  </div>
 </div>
 
 <%- include('partials/footer', {scriptURL: "/public/home.js"}) %>
